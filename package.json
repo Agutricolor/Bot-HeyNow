@@ -1,0 +1,24 @@
+{
+  "name": "bot-heynow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^4.1.1",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.19",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.17.1"
+  },
+  "devDependencies": {
+    "prisma": "^4.1.1"
+  }
+}
