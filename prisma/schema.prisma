@@ -7,29 +7,6 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Admin {
-    id        String   @id @default(auto()) @map("_id") @db.ObjectId
-    email     String   @unique
-    password  String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-}
-
-model Concert {
-    id      String   @id @default(auto()) @map("_id") @db.ObjectId
-    name    String   @unique
-    price   Float
-    stock   Float
-    tickets Ticket[]
-}
-
-model Ticket {
-    id        String   @id @default(auto()) @map("_id") @db.ObjectId
-    ci        String   @unique
-    Concert   Concert? @relation(fields: [concertId], references: [id])
-    concertId String?  @db.ObjectId
-}
-
 model Agenda {
     id   String   @id @default(auto()) @map("_id") @db.ObjectId
     name String
