@@ -29,3 +29,10 @@ model Ticket {
     Concert   Concert? @relation(fields: [concertId], references: [id])
     concertId String?  @db.ObjectId
 }
+
+model Agenda {
+    id   String   @id @default(auto()) @map("_id") @db.ObjectId
+    name String
+    ci   String   @unique
+    date DateTime
+}
