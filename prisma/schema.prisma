@@ -11,5 +11,5 @@ model Agenda {
     id   String   @id @default(auto()) @map("_id") @db.ObjectId
     name String
     ci   String   @unique
-    date DateTime
+    date DateTime @unique
 }
